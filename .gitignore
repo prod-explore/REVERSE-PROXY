@@ -1,0 +1,10 @@
+# Ignore SSL keys and certs
+*.key
+*.pem
+*.crt
+
+# Ignore environment files with passwords
+.env
+
+# Ignore OS-specific files
+.DS_Store

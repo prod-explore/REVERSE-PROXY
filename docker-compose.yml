@@ -1,0 +1,45 @@
+version: "3.9"
+
+services:
+  nginx-proxy:
+    image: nginx:alpine
+    container_name: nginx-proxy
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./conf.d:/etc/nginx/conf.d:ro
+      - ./certs/conf:/etc/letsencrypt
+      - ./certs/www:/var/www/certbot
+    networks:
+      - hypnagogia
+      - cloud
+      - futumore-network
+      - obsidian
+      - nextouch-network
+      - qmee-external
+      - practicourse-network
+
+  certbot:
+    image: certbot/certbot
+    container_name: certbot
+    volumes:
+      - ./certs/www:/var/www/certbot
+      - ./certs/conf:/etc/letsencrypt
+
+networks:
+  hypnagogia:
+    external: true
+  futumore-network:
+    external: true
+  cloud:
+    external: true
+  obsidian:
+    external: true
+  nextouch-network:
+    external: true
+  qmee-external:
+    external: true
+  practicourse-network:
+    external: true
