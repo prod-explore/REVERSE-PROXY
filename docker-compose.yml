@@ -20,6 +20,7 @@ services:
       - nextouch-network
       - qmee-external
       - practicourse-network
+      - skarpa-network
 
   certbot:
     image: certbot/certbot
@@ -42,4 +43,6 @@ networks:
   qmee-external:
     external: true
   practicourse-network:
+    external: true
+  skarpa-network:
     external: true
