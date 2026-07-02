@@ -21,6 +21,7 @@ services:
       - qmee-external
       - practicourse-network
       - skarpa-network
+      - mindgate_net
 
   certbot:
     image: certbot/certbot
@@ -45,4 +46,6 @@ networks:
   practicourse-network:
     external: true
   skarpa-network:
+    external: true
+  mindgate_net:
     external: true
