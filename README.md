@@ -34,8 +34,7 @@ docker-compose.yml # nginx-proxy + certbot services, network definitions
 | `futumore.conf` | Agency site |
 | `skarpa.conf` | Sports registration platform |
 | `nextouch.conf` | Cross-platform touchpad backend |
-| `hypnagogia.conf` | Beat store |
-| `practicourse.conf` | — |
+| `hypnagogia.conf` | Digital e-commerce platform |
 
 ## Setup
 
