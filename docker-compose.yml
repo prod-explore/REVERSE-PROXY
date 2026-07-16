@@ -5,6 +5,9 @@ services:
     image: nginx:alpine
     container_name: nginx-proxy
     restart: unless-stopped
+    extra_hosts:
+      # Allows nginx to reach services on the host machine (e.g. Obsidian REST API)
+      - "host.docker.internal:host-gateway"
     ports:
       - "80:80"
       - "443:443"
