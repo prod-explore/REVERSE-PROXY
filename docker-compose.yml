@@ -15,6 +15,7 @@ services:
       - ./conf.d:/etc/nginx/conf.d:ro
       - ./certs/conf:/etc/letsencrypt
       - ./certs/www:/var/www/certbot
+      - ./certs/default-selfsigned:/etc/nginx/certs/default-selfsigned:ro
     networks:
       - hypnagogia
       - cloud
