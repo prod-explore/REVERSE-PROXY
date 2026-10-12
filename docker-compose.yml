@@ -22,8 +22,6 @@ services:
       - futumore-network
       - obsidian
       - nextouch-network
-      - qmee-external
-      - practicourse-network
       - skarpa-network
       - mindgate_net
       - blackbook-network
@@ -45,10 +43,6 @@ networks:
   obsidian:
     external: true
   nextouch-network:
-    external: true
-  qmee-external:
-    external: true
-  practicourse-network:
     external: true
   skarpa-network:
     external: true
